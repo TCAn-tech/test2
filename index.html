@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>安宇翔音乐播放器</title>
+    <link rel="stylesheet" href="./css/audio.css">
+</head>
+<body background="./img/bg0.png">
+        <div class="up_container">
+            <div class="record_container">
+                <div class="record_bg">
+                    <div id="record_img" class="rotate-play">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="introduction_container">
+                <div class="text_container">
+                    <div class="music_container">音乐1</div>
+                        <div class="author_container">
+                            作者：安宇翔
+                            <span class="author_name"></span>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="buttom_container">
+            //音频
+            <audio id="audiotag"></audio>
+            <div class="progress"> <div class="progress-play"></div></div>
+            <div class="contruls">
+            <div class="time_container">
+                <span class="player_time">00:00 </span>
+                <span class="audio_time">/ 00:00</span>
+            </div>
+            <div class="center_container">
+                <div class="playMode center-icon">
+
+                </div>
+                <div class="beformusic center-icon">
+
+                </div>
+                <div class="playpause center-icon icon-play">
+
+                </div>
+                <div class="nextmusic center-icon">
+
+                </div>
+                <div class="volumn center-icon">
+                </div>
+                <input type="range" id="volumn-togger" value="70" min="0" max="100" step="1" />
+            </div>
+            <div class="right_container">
+                <div id="MV" class="bottom-icon">
+                </div>
+                <div id="speed">
+                    1x
+                </div>
+                <div id="list" class="bottom-icon">
+                </div>
+            </div>   
+            </div>
+        </div>
+         <script src="./js/audio.js"></script>
+    <div class="close-container" style="display:none"></div>
+    <div class="list-container" style="display:none">
+        <div class="musiclistTitle">播放队列</div>
+        <hr />
+        <div class="musiclist"></div>
+    </div>
+    <!-- MV 播放容器 -->
+    <div class="mv-container" style="display:none">
+        <div class="mv-inner">
+            <button class="mv-close">关闭</button>
+            <video id="mvPlayer" controls webkit-playsinline playsinline></video>
+        </div>
+    </div>
+</body>
+</html>
